@@ -1,0 +1,219 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+
+@font-face {font-family: "Pokemon"; src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot"); src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg"); }
+
+/* Box Model Hack */
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body {
+  background-image: url("https://cdn.bulbagarden.net/upload/2/25/LGPE_Kanto_Map.png");
+  background-size: cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;              /* optional, center the image */
+
+}
+
+h1 {
+  font-family: "Pokemon", "Roboto";
+  font-size: 2.3em;
+  letter-spacing: 0.18em;
+  text-shadow: 4px 4px #2D26D7;
+  color: #FEFD02;
+  -webkit-text-fill-color: #FEFD02; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2D26D7;
+}
+
+select {
+  margin: 2.5% 0 2.5% 0;
+}
+
+button {
+  border: none;
+  border-radius: 15px;
+  background:#C45450;
+  color: #F8F8F8;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 2%;
+  margin-bottom: 3%;
+}
+
+.hidden {
+  display: none;
+}
+
+button:hover {
+  background: #ff7c78;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.container {
+  background: #F8F8F8;
+  border-radius: 5%;
+  border: 5px solid #C45450;
+  box-shadow: 3px 5px rgba(97, 95, 95, 0.30);
+  width: 65%;
+  margin: 0.5% auto;
+  padding: 0;
+  text-align: center;
+}
+
+#pokePic > img {
+  width: 90%;
+  border-radius: 5%;
+  border: 3px solid #C45450;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* Tablets */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+      background-image: url("https://cdn.bulbagarden.net/upload/2/25/LGPE_Kanto_Map.png");
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;                      /* <------ */
+      background-repeat:   no-repeat;
+      background-position: center center;              /* optional, center the image */
+    
+    }
+
+
+
+    h1 {
+      font-size: 4em;
+    }
+
+    
+    #subTitle {
+      font-size: 3em;
+    }
+
+    .container {
+      width: 95%;
+    }
+
+    form > select {
+      width: 25%;
+      font-size: 3em;
+      margin: 3%;
+    }
+
+    select > option {
+      font-size: 15px;
+    }
+
+
+    button {
+      border: none;
+      border-radius: 15px;
+      background:#C45450;
+      color: #F8F8F8;
+      font-weight: bold;
+      font-size: 3em;
+      margin-top: 5%;
+      padding: 2%;
+    }
+    
+
+    #pokePic > img {
+      width: 65%;
+      border-radius: 5%;
+      border: 3px solid #C45450;
+    }
+
+    #pokeResult {
+      font-size: 2.8em;
+    }
+
+    #pokeDescription {
+      font-size: 2em;
+      justify-content: center;
+    }
+    
+
+}
+
+/* Phones */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+      background-image: url("https://cdn.bulbagarden.net/upload/2/25/LGPE_Kanto_Map.png");
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;                      /* <------ */
+      background-repeat:   no-repeat;
+      background-position: center center;              /* optional, center the image */
+    
+    }
+
+
+    h1 {
+      font-size: 6em;
+    }
+
+    
+    #subTitle {
+      font-size: 4em;
+    }
+
+    .container {
+      width: 95%;
+    }
+
+    form > select {
+      width: 25%;
+      font-size: 3.5em;
+      margin: 3%;
+      text-overflow: ellipsis;
+    }
+
+    select > option {
+      font-size: 15px;
+    }
+
+
+    button {
+      border: none;
+      border-radius: 15px;
+      background:#C45450;
+      color: #F8F8F8;
+      font-weight: bold;
+      font-size: 4em;
+      margin-top: 5%;
+      padding: 2%;
+    }
+
+    #pokeResult {
+      font-size: 3.8em;
+    }
+
+    #pokeDescription {
+      font-size: 2.5em;
+      justify-content: center;
+    }
+    
+}
